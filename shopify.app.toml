@@ -6,7 +6,6 @@ application_url = "https://shopify.dev/apps/default-app-home"
 embedded = true
 
 [build]
-include_config_on_deploy = true
 automatically_update_urls_on_dev = true
 
 [webhooks]
@@ -22,3 +21,8 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
+
+[sidekick]
+# Required whenever the app ships a sidekick-eligible extension, which the
+# template's app-tools is. Describes what this app's extensions do.
+extensions_summary = "Show a product's shipping note from its metafield under that product's line in checkout"
